@@ -15,4 +15,4 @@ jobs:
       - name: "simulate build"
         run: php /home/vsj/github/actions-runner/dummyrunner 5
       - name: test
-	run: php test.php
+        run: php test.php
