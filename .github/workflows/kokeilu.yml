@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron: '0 * * * *'
+    - cron: '45 13 * * *'
 
 concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
