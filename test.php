@@ -1,7 +1,7 @@
 <?php
-for ($i = 0; $i < 15; $i += 1) {
+for ($i = 0; $i < 20; $i += 1) {
   echo $i . ': ' . date('c');
-  sleep (2);
+  sleep (6);
   echo PHP_EOL;
 }
 exit(0);
