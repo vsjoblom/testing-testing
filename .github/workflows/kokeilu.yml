@@ -1,18 +1,19 @@
 name: kokeilu
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
   build_and_test:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux]
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: "simulate build"
-        run: php /home/vsj/github/actions-runner/dummyrunner 5
+      - uses: actions/checkout@v3
       - name: test
-        run: php test.php
+        run: echo OoKoo
+      - name: test php
+        run: php -r "var_dump(date('c')); echo PHP_EOL;"
