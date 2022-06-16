@@ -15,5 +15,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: test
         run: echo OoKoo
-      - name: test php
-        run: php -r "var_dump(date('c')); echo PHP_EOL;"
+      - name: run stuff
+        run: php test.php
