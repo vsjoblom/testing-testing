@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
   pull_request:
     branches: [ master ]
-  schedule:
-    - cron: '45 13 * * *'
+#  schedule:
+#    - cron: '45 13 * * *'
 
 concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
