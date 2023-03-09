@@ -25,7 +25,8 @@ jobs:
       - id: check
         name: Determine stuff
         run: |
-          echo "status=skip" >> $GITHUB_OUTPUT
+          git status
+
 
 
   build_and_test:
