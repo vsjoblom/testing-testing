@@ -25,7 +25,9 @@ jobs:
       - id: check
         name: Determine stuff
         run: |
-          git status
+          git fetch --depth=1 origin ${{ github.base_ref }}
+          git diff --name-only origin/${{ github.base_ref }}
+          echo "status=skip" >> $GITHUB_OUTPUT
 
 
 
