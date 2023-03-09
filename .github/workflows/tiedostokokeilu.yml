@@ -27,7 +27,7 @@ jobs:
         run: |
           git fetch --depth=1 origin ${{ github.base_ref }}
           if [[ $(git diff --name-only origin/${{ github.base_ref }} | grep -vPc '^.github/') > 0 ]] ;
-          then status="skip"; echo "Hello world";
+          then status="run"; echo "Hello world";
           else status="skip";
           fi
           echo "status=$status" >> $GITHUB_OUTPUT
